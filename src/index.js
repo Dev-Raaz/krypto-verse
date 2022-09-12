@@ -1,6 +1,11 @@
+// @Library Imports
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App';
+
+// @User defined imports
+// styles
+import './styles/index.scss'
 
 // @Creating a root
 const root = ReactDOM.createRoot(document.querySelector('#root'))
