@@ -1,0 +1,17 @@
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App';
+
+// @Creating a root
+const root = ReactDOM.createRoot(document.querySelector('#root'))
+
+// @Rendering in strict mode
+/* Strict mode highlights potential problems in the app, it activates
+   additional checks and warnings for it's descendents.
+*/
+
+root.render(
+    <React.StrictMode>
+        <App/>
+    </React.StrictMode>
+)
