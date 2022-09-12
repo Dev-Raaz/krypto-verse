@@ -3,7 +3,7 @@
 * @desc This file is used to reset some of the default browser styles.
 */
 
-//Resets the paddings and margins
+// Resets the paddings and margins
 *,
 *::before,
 *::after{
@@ -12,9 +12,21 @@
     box-sizing: border-box;
 }
 
-//Setting the base font-size and line-height
+// Setting the base font-size and line-height
 html{
     font-size: 10px;
     line-height: 1.5;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+// Main Wrapper
+.main-wrapper{
+    width: 100%;
+}
+
+
+@media only screen and (min-width: 768px) {
+    .main-wrapper {
+        display: flex;
+    }
 }

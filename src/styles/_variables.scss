@@ -57,20 +57,25 @@ $sz-xxs-1920: 1.2rem;
 * COLOR variables for various ui components are defined in this section.
 **/
 
-//Basic colors
-$prm-color: #45C1EF; 
-$sec-color: #ffffff;
+// Basic colors
+$prm-color: #8318FA; 
+$sec-color: #110024;
+$prm-bg: #110024;
 
-//Text Colors
-$head-color: #000000;
-$para-color: #707070;
+// Text Colors
+$head-color: #ffffff;
+$para-color: #B0ABB6;
 
-//States
-$prm-hover: #3FB6E2;
-$prm-active: #3DACD5;
+// States
+$prm-hover: #5405AA;
+$prm-active: #4A0696;
 
-$sec-hover: #F4FCFE;
-$sec-active: #E8F8FD;
+$sec-hover: #180033;
+$sec-active: #14002A;
+
+// Body
+$body-bg: #090211;
+
 
 // Skeleton
 $skel-color: #E8E8E8; 

@@ -3,7 +3,7 @@ import React from 'react'
 const HomePage = () => {
   return (
     <main>
-        <h1>Welcome To Krypto Verse</h1>
+        <h1>Welcome To Krypt Verse</h1>
     </main>
   )
 }

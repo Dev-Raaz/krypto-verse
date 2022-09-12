@@ -1,0 +1,57 @@
+/**
+NAVBAR
+*/
+.nav {
+    height: 100vh;
+    padding: $sz-s;
+    background-color: $sec-color;
+    min-width: 25rem;
+}
+
+// @Logo
+.logo{
+    display: inline-flex;
+    align-items: center;
+}
+
+// Brand name
+.logo p {
+    margin: 0;
+    margin-left: 6px;
+}
+
+// @Links
+.nav-link {
+    display: block;
+    padding: $sz-m;
+    border-radius: $rad-l;
+    margin: 0;
+    margin-top: 6px;
+    transition: background-color 200ms linear;
+}
+
+.nav-link:hover {
+    background-color: $sec-hover;
+    transition: background-color 200ms linear;
+}
+
+.nav-link:active {
+    background-color: $sec-active;
+    transition: background-color 200ms linear;
+}
+
+// State
+.nav-link.active {
+    background-color: $sec-hover;
+    color: $prm-color;
+}
+
+
+// -----------------------------------
+// @MEDIA QUERRIES
+// -----------------------------------
+@media only screen and (min-width: 768px) {
+    .nav{
+        padding: $sz-m-768;
+    }
+}
