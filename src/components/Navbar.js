@@ -1,10 +1,16 @@
+// @Library Imports
 import React, { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import Fab from '@mui/material/Fab'
+import MenuIcon from '@mui/icons-material/Menu'
+import CloseIcon from '@mui/icons-material/Close'
+
 
 const Navbar = () => {
 
   const {pathname} = useLocation()
   const [activeLink, setActiveLink] = useState([false, false, false])
+  const [showMenu, setShowMenu] = useState(false)
 
   useEffect(()=> {
     if(pathname === '/currencies'){
@@ -21,9 +27,10 @@ const Navbar = () => {
 
 
   return (
-    <nav className='nav'>
+    <>
+      <nav className={showMenu ? 'nav show' : 'nav'}>
         <Link className='logo' to='/#'
-         onClick={()=>setActiveLink([false, false, false])}>
+         onClick={()=>{setActiveLink([false, false, false]);setShowMenu(false)}}>
             <img src='/res/official/logo.svg' alt='Krypt Verse Logo'/>
             <p>Krypt Verse</p>
         </Link>
@@ -31,23 +38,46 @@ const Navbar = () => {
         <Link 
         className={activeLink[0] ? 'nav-link active' : 'nav-link'} 
         to='/currencies'
-        onClick={()=>setActiveLink([true, false, false])}>
+        onClick={()=>{setActiveLink([true, false, false]);setShowMenu(false)}}>
           Currencies
         </Link>
+
         <Link 
         className={activeLink[1] ? 'nav-link active' : 'nav-link'} 
         to='/exchanges'
-        onClick={()=>setActiveLink([false, true, false])}>
+        onClick={()=>{setActiveLink([false, true, false]);setShowMenu(false)}}>
           Exchanges
         </Link>
+
         <Link 
         className={activeLink[2] ? 'nav-link active' : 'nav-link'} 
         to='/news'
-        onClick={()=>setActiveLink([false, false, true])}>
+        onClick={()=>{setActiveLink([false, false, true]);setShowMenu(false)}}>
           News
         </Link>
-
-    </nav>
+      </nav>
+      <div className='mob-nav-header'>
+        
+        <Link className='logo mobile' to='/#'
+          onClick={()=>{setActiveLink([false, false, false]);setShowMenu(false)}}>
+              <img src='/res/official/logo.svg' alt='Krypt Verse Logo'/>
+              <p>Krypt Verse</p>
+        </Link>
+        {
+          !showMenu 
+          ?
+          <Fab color='primary' aria-label='Menu' className='menu-opener' size='medium'
+          onClick={()=>setShowMenu(true)}>
+            <MenuIcon fontSize='large'/>
+          </Fab> 
+          :
+          <Fab color='primary' aria-label='Menu' className='menu-opener' size='medium'
+          onClick={()=>setShowMenu(false)}>
+            <CloseIcon fontSize='large'/>
+          </Fab>
+        }
+      </div>
+    </>
   )
 }
 
