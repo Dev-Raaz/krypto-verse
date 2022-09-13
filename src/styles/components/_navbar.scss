@@ -81,13 +81,17 @@ NAVBAR
 @media only screen and (min-width: 768px) {
     .nav{
         padding: $sz-m-768;
-        position: relative;
+        position: sticky;
+        top: 0;
         min-width: 25rem;
         width: auto;
         display: block;
     }
 
-    .nav + .menu-opener {
+    .mob-nav-header{
+        display: none;
+    }
+    .mob-nav-header .menu-opener {
         display: none;
     }
 

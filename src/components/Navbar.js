@@ -5,7 +5,7 @@ import Fab from '@mui/material/Fab'
 import MenuIcon from '@mui/icons-material/Menu'
 import CloseIcon from '@mui/icons-material/Close'
 
-
+// Navbar Component
 const Navbar = () => {
 
   const {pathname} = useLocation()
@@ -29,12 +29,14 @@ const Navbar = () => {
   return (
     <>
       <nav className={showMenu ? 'nav show' : 'nav'}>
+        {/* Logo */}
         <Link className='logo' to='/#'
          onClick={()=>{setActiveLink([false, false, false]);setShowMenu(false)}}>
             <img src='/res/official/logo.svg' alt='Krypt Verse Logo'/>
             <p>Krypt Verse</p>
         </Link>
-
+        
+        {/* Links to other pages */}
         <Link 
         className={activeLink[0] ? 'nav-link active' : 'nav-link'} 
         to='/currencies'
@@ -56,13 +58,16 @@ const Navbar = () => {
           News
         </Link>
       </nav>
+
+      {/* Mobile Navbar Header */}
       <div className='mob-nav-header'>
-        
         <Link className='logo mobile' to='/#'
           onClick={()=>{setActiveLink([false, false, false]);setShowMenu(false)}}>
               <img src='/res/official/logo.svg' alt='Krypt Verse Logo'/>
               <p>Krypt Verse</p>
         </Link>
+
+        {/* Menu Toggler Buttons */}
         {
           !showMenu 
           ?
