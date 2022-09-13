@@ -5,18 +5,19 @@ import millify from 'millify'
 // API hooks
 import { useGetCryptosQuery } from '../services/cryptoApi' 
 
-const Cryptocurrencies = () => {
+const Cryptocurrencies = ({showTop}) => {
 
   const { data : currencies, isFetching } = useGetCryptosQuery()
 
   // Loading . . .
-  if(isFetching)
-    return <main><h1>Loading . . .</h1></main>
+  if(isFetching || currencies === undefined)
+    return <h1>Loading . . .</h1>
 
+  console.log(showTop)
 
   return (
     <>
-        <h1>Cryptocurrencies</h1>
+        <h1>Currencies</h1>
         <p>Here are the top 50 crypto currencies.</p>
         <div className='currencies-grid'>
           {

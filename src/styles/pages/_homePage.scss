@@ -7,9 +7,34 @@
 }
 
 // @Stats Card
+.stats-card {
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    background-color: $sec-color;
+    padding: $sz-m;
+    border-radius: $rad-l;
+}
+
+// Description
+.stats-card .description {
+    align-items: flex-start;
+}
 // Count
 .stats-card h3 {
     margin-top: $sz-m;
+}
+
+// Text
+.stats-card p {
+    margin-top: 0;
+}
+
+// Image
+.stats-card img {
+    height: 10rem;
+    object-fit: contain;
 }
 
 // --------------------------------------------
