@@ -20,7 +20,7 @@ const HomePage = () => {
     } = data.data.stats
 
   return (
-    <main>
+    <>
         <h1>Global Crypto Stats</h1>
 
         {/* Stats Grid */}
@@ -53,7 +53,7 @@ const HomePage = () => {
           </div>
 
         </div>
-    </main>
+    </>
   )
 }
 

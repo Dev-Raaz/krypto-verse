@@ -9,18 +9,20 @@ const Cryptocurrencies = () => {
 
   const { data : currencies, isFetching } = useGetCryptosQuery()
 
+  // Loading . . .
   if(isFetching)
     return <main><h1>Loading . . .</h1></main>
-  console.log(currencies.data.coins)
 
 
   return (
-    <main>
+    <>
         <h1>Cryptocurrencies</h1>
+        <p>Here are the top 50 crypto currencies.</p>
         <div className='currencies-grid'>
           {
             currencies.data.coins.map(coin => (
-              <div key={coin.uuid} className='currency-card'>
+              <a href={`/currencies/${coin.uuid}`} 
+                key={coin.uuid} className='currency-card'>
                 <div className='card-header'>
                   <p>{coin.rank}. {coin.name}</p>
                   <img src={coin.iconUrl} alt={`${coin.name} Logo`}/>
@@ -30,11 +32,11 @@ const Cryptocurrencies = () => {
                 <p>Change:  <span className={coin.change > 0 ? 'changePlus' : 'changeMinus'}>
                 {coin.change}%</span>
                 </p>
-              </div>
+              </a>
             ))
           }
         </div>
-    </main>
+    </>
   )
 }
 
