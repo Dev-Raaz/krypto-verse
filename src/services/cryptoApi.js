@@ -17,12 +17,16 @@ export const cryptoApi = createApi({
     endpoints: ( builder) => ({
         // We can add endpoints to request from different endpoints
         getCryptos: builder.query({
-            query: () => createRequest('/coins')
+            query: (count) => createRequest(`/coins?limit=${count}`)
+        }),
+        getExchanges: builder.query({
+            query: (count) => createRequest(`/exchanges`)
         })
     })
 })
 
 // Redux returns these hooks that we can use in our components
 export const {
-    useGetCryptosQuery
+    useGetCryptosQuery,
+    useGetExchangesQuery
 } = cryptoApi

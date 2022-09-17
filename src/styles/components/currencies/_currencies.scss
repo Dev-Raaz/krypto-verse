@@ -1,3 +1,10 @@
+// @Currencies Header
+.currencies-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 // @Currencies Grid
 .currencies-grid {
     display: grid;

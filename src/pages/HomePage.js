@@ -5,10 +5,11 @@ import millify from 'millify'
 // redux 
 import { useGetCryptosQuery } from '../services/cryptoApi'
 import Cryptocurrencies from './Cryptocurrencies'
+import Exchanges from './Exchanges'
 
 const HomePage = () => {
-  
-  const { data, isFetching } = useGetCryptosQuery()
+
+  const { data, isFetching } = useGetCryptosQuery(10)
   
   if(isFetching || data === undefined)
     return <h1>Loading . . .</h1>
@@ -30,7 +31,7 @@ const HomePage = () => {
 
           <div className='stats-card'>
             <div className='description'>
-              <p>Total Cryptocurrencies</p>
+              <p>Total Currencies</p>
               <h3>{total}</h3>
             </div>
             <img src='/res/pages/home/totalCurrencies.png' alt='Currencies'/>
@@ -71,7 +72,8 @@ const HomePage = () => {
 
         </div>
 
-        <Cryptocurrencies showTop/>
+        <Cryptocurrencies simplified abc='hey'/>
+        <Exchanges name='Shyam'/>
     </>
   )
 }

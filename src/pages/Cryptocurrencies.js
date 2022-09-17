@@ -4,20 +4,25 @@ import millify from 'millify'
 // @User defined imports
 // API hooks
 import { useGetCryptosQuery } from '../services/cryptoApi' 
+import { Link } from '@mui/material'
 
-const Cryptocurrencies = ({showTop}) => {
-
-  const { data : currencies, isFetching } = useGetCryptosQuery()
+const Cryptocurrencies = ({simplified}) => {
+  
+  // Condition for top 10
+  const count = simplified ? 10 : 100
+  const { data : currencies, isFetching } = useGetCryptosQuery(count)
 
   // Loading . . .
   if(isFetching || currencies === undefined)
     return <h1>Loading . . .</h1>
 
-  console.log(showTop)
 
   return (
     <>
-        <h1>Currencies</h1>
+        <div className='currencies-header'>
+          <h1>Currencies</h1>
+          {simplified && <Link href='/currencies'>Show More</Link>}
+        </div>
         <p>Here are the top 50 crypto currencies.</p>
         <div className='currencies-grid'>
           {
