@@ -3,21 +3,31 @@ import millify from 'millify'
 
 // @User defined imports
 import { useGetExchangesQuery } from '../services/exchangeApi'
+import { Helmet } from 'react-helmet'
 
 const Exchanges = ({simplified}) => {
-  
-  // Condition for top 10
-  const count = simplified ? 10 : 100
-  const { data : exchanges, isFetching } = useGetExchangesQuery(count)
+
+  const { data : exchanges, isFetching } = useGetExchangesQuery()
 
   if(isFetching || exchanges === undefined)
-    return <h1>Loading . . .</h1>
-
-  console.log(exchanges)
+    return (
+    <>
+      <Helmet>
+        <title>Exchanges</title>
+        <meta name='description' 
+          content='Here are the top 100 crypto exchanges in the world'/>
+      </Helmet>
+      <h1>Loading . . .</h1>
+    </>)
 
   return (
     <>
-        <h1>Exchanges</h1>
+      <Helmet>
+        <title>Crypto Exchanges</title>
+        <meta name='description' 
+          content='Here are the top 100 crypto exchanges in the world'/>
+      </Helmet>
+      <h1>Exchanges</h1>
         <p>Here are the top {exchanges.length} exchanges.</p>
         <div className='currencies-grid no-hover'>
           {
@@ -36,7 +46,7 @@ const Exchanges = ({simplified}) => {
               </div>
             ))
           }
-        </div>
+        </div> 
     </>
   )
 }

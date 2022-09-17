@@ -5,6 +5,7 @@ import millify from 'millify'
 // API hooks
 import { useGetCryptosQuery } from '../services/cryptoApi' 
 import { Link } from '@mui/material'
+import { Helmet } from 'react-helmet'
 
 const Cryptocurrencies = ({simplified}) => {
   
@@ -14,7 +15,15 @@ const Cryptocurrencies = ({simplified}) => {
 
   // Loading . . .
   if(isFetching || currencies === undefined)
-    return <h1>Loading . . .</h1>
+    return (
+      <>
+        <Helmet>
+          <title>Currencies</title>
+          <meta name='description' content='Here are the top 100 crypto currencies in the world'/>
+        </Helmet>
+        <h1>Loading . . .</h1>
+      </>
+    )
 
 
   return (
@@ -23,7 +32,7 @@ const Cryptocurrencies = ({simplified}) => {
           <h1>Currencies</h1>
           {simplified && <Link href='/currencies'>Show More</Link>}
         </div>
-        <p>Here are the top 50 crypto currencies.</p>
+        <p>Here are the top {currencies.data.coins.length} crypto currencies.</p>
         <div className='currencies-grid'>
           {
             currencies.data.coins.map(coin => (
