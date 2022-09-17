@@ -5,7 +5,6 @@ import millify from 'millify'
 // redux 
 import { useGetCryptosQuery } from '../services/cryptoApi'
 import Cryptocurrencies from './Cryptocurrencies'
-import Exchanges from './Exchanges'
 
 const HomePage = () => {
 
