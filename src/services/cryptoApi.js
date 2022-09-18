@@ -19,8 +19,8 @@ export const cryptoApi = createApi({
         getCryptos: builder.query({
             query: (count) => createRequest(`/coins?limit=${count}`)
         }),
-        getExchanges: builder.query({
-            query: (count) => createRequest(`/exchanges`)
+        getCryptoById: builder.query({
+            query: (id) => createRequest(`/coin/${id}`)
         })
     })
 })
@@ -28,5 +28,5 @@ export const cryptoApi = createApi({
 // Redux returns these hooks that we can use in our components
 export const {
     useGetCryptosQuery,
-    useGetExchangesQuery
+    useGetCryptoByIdQuery
 } = cryptoApi

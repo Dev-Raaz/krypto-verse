@@ -32,7 +32,7 @@ $sz-xl-1280: 3.2rem;
 $sz-l-1280: 2.4rem;
 $sz-m-1280: 1.8rem;
 $sz-s-1280: 1.6rem;
-$sz-xs-1280: 1.2rem;
+$sz-xs-1280: 1.4rem;
 $sz-xxs-1280: 1.2rem;
 
 //@screen >1440px
@@ -76,6 +76,17 @@ $sec-active: #14002A;
 // Body
 $body-bg: #090211;
 
+// Tag
+$tag-bg: #312B37;
+$tag-success-bg: #0D2423;
+$tag-warning-bg: #312914;
+$tag-error-bg: #2A071D;
+
+
+$tag-text: #ffffff;
+$tag-success-text: #23D381;
+$tag-warning-text: #FFEF25; 
+$tag-error-text: #F33474;
 
 // Skeleton
 $skel-color: #E8E8E8; 

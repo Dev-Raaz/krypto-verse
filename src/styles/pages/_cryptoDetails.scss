@@ -1,0 +1,141 @@
+// @Header
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: $sz-xxl 0 $sz-m;
+}
+
+// Image
+.header img {
+    height: 32px;
+    width: 32px;
+    border-radius: 0.8rem;
+    margin-right: 1rem;
+}
+
+// Heading
+.header h1 {
+    margin: 0;
+}
+
+// @Rankings
+.rankings {
+    display: flex;
+    align-items: center;
+}
+
+// Basic
+.rankings .tag {
+    font-size: $sz-xs;
+    padding: $sz-xxs $sz-xs;
+    background-color: $tag-bg;
+    color: $tag-text;
+    border-radius: 6px;
+    margin-right: $sz-m;
+}
+
+// Success
+.rankings .tag.success {
+    background-color: $tag-success-bg;
+    color: $tag-success-text;
+}
+
+// Warning
+.rankings .tag.warning {
+    background-color: $tag-warning-bg;
+    color: $tag-warning-text;
+}
+
+// Error
+.rankings .tag.error {
+    background-color: $tag-error-bg;
+    color: $tag-error-text;
+}
+
+// Website
+.rankings .tag.website {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+}
+
+// --------------------------------------------------
+// @MEDIA QUERRIES
+// --------------------------------------------------
+
+@media only screen and (min-width: 768px) {
+    // @Header
+    .header {
+        margin: $sz-xxl-768 0 $sz-m-768;
+    }
+
+    // Image
+    .header img {
+        height: 40px;
+        width: 40px;
+    }
+
+
+    // @Rankings
+    .rankings .tag {
+        padding: $sz-xxs-768 $sz-xs-768;
+        font-size: $sz-xs-768;
+    }
+
+    // Website
+.rankings .tag.website {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+}
+
+}
+
+@media only screen and (min-width: 1280px) {
+    // @Header
+    .header {
+        margin: $sz-xxl-1280 0 $sz-m-1280;
+    }
+
+    // Image
+    .header img {
+        height: 48px;
+        width: 48px;
+        margin-right: 1.2rem;
+    }
+
+    // @Rankings
+    // Tag basic
+    .rankings .tag {
+        padding: $sz-xxs-768 $sz-xs-1280;
+        font-size: $sz-xs-1280;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    // @Header
+    .header {
+        margin: $sz-xxl-1440 0 $sz-m-1440;
+    }
+
+    // Image
+    .header img {
+        height: 56px;
+        width: 56px;
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    // @Header
+    .header {
+        margin: $sz-xxl-1920 0 $sz-m-1920;
+    }
+
+    // Image
+    .header img {
+        height: 64px;
+        width: 64px;
+        margin-right: 1.4rem;
+    }
+}
