@@ -26,39 +26,116 @@
 }
 
 // Basic
-.rankings .tag {
+.tag {
     font-size: $sz-xs;
     padding: $sz-xxs $sz-xs;
     background-color: $tag-bg;
     color: $tag-text;
     border-radius: 6px;
     margin-right: $sz-m;
+    display: inline-flex;
+    align-items: center;
+}
+
+.tag p {
+    margin: 0;
+}
+
+.tag img {
+    margin-right: 5px;
+    height: 12px;
 }
 
 // Success
-.rankings .tag.success {
+.tag.success {
     background-color: $tag-success-bg;
     color: $tag-success-text;
 }
 
+.tag.success p {
+    color: $tag-success-text;
+}
+
 // Warning
-.rankings .tag.warning {
+.tag.warning {
     background-color: $tag-warning-bg;
     color: $tag-warning-text;
 }
 
 // Error
-.rankings .tag.error {
+.tag.error {
     background-color: $tag-error-bg;
     color: $tag-error-text;
 }
 
+.tag.error p {
+    color: $tag-error-text;
+}
+
 // Website
-.rankings .tag.website {
+.tag.website {
     height: 32px;
     width: 32px;
     border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 200ms linear;
 }
+
+.tag.website:hover {
+    background-color: $tag-hover-bg;
+    transition: background-color 200ms linear;
+}
+
+
+.tag.website img {
+    height: 16px;
+    width: 16px;
+    margin: 0;
+}
+
+// @Stats Grid
+.stats-grid {
+    display: grid;
+    grid-template-columns: auto;
+    gap: $sz-l;
+}
+
+// @Card
+.card {
+    padding: $sz-m;
+    border-radius: $rad-l;
+    background-color: $sec-color;
+}
+
+.card > p, .card h2 {
+    margin-top: 0;
+}
+
+.card h2 {
+    margin-bottom: 0;
+    margin-right: $sz-m;
+}
+
+.card .value {
+    display: flex;
+    align-items: center;
+}
+
+// Market Cap
+.card .data:nth-child(2){
+    margin-top: $sz-l;
+}
+.card .data h3 {
+    margin: 0;
+}
+.card .data p {
+    margin-top: 0;
+}
+
+
 
 // --------------------------------------------------
 // @MEDIA QUERRIES
@@ -78,18 +155,48 @@
 
 
     // @Rankings
-    .rankings .tag {
+    .tag {
         padding: $sz-xxs-768 $sz-xs-768;
         font-size: $sz-xs-768;
     }
 
     // Website
-.rankings .tag.website {
-    height: 32px;
-    width: 32px;
-    border-radius: 50%;
-}
+    .tag.website {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+    }
 
+    .tag.website img {
+        height: 24px;
+        width: 24px;
+    }
+
+    // @Stats Grid
+    .stats-grid {
+        grid-template-columns: auto auto;
+        gap: $sz-l-768;
+    }
+
+    // @Card
+    .card {
+        padding: $sz-m-768;
+    }
+
+    .card h2 {
+        margin-right: $sz-m-768;
+    }
+
+    // Time Price Range
+    .time-price-range {
+        display: flex;
+        align-items: center;
+    }
+
+    // Market Cap
+    .card .data:nth-child(2){
+        margin-top: $sz-l-768;
+    }
 }
 
 @media only screen and (min-width: 1280px) {
@@ -107,10 +214,31 @@
 
     // @Rankings
     // Tag basic
-    .rankings .tag {
-        padding: $sz-xxs-768 $sz-xs-1280;
+    .tag {
+        padding: $sz-xxs-1280 $sz-xs-1280;
         font-size: $sz-xs-1280;
     }
+
+    // @Stats Grid
+    .stats-grid {
+        grid-template-columns: auto auto auto;
+        gap: $sz-l-1280;
+    }
+
+    // @Card
+    .card {
+        padding: $sz-m-1280;
+    }
+
+    .card h2 {
+        margin-right: $sz-m-1280;
+    }
+
+    // Market Cap
+    .card .data:nth-child(2){
+        margin-top: $sz-l-1280;
+    }
+
 }
 
 @media only screen and (min-width: 1440px) {
@@ -124,6 +252,45 @@
         height: 56px;
         width: 56px;
     }
+
+    // @Rankings
+    // Tag basic
+    .tag {
+        padding: $sz-xxs-1440 $sz-xs-1440;
+        font-size: $sz-xs-1440;
+    }
+
+    // Website
+    .tag.website {
+        height: 48px;
+        width: 48px;
+        border-radius: 50%;
+    }
+
+    .tag.website img {
+        height: 24px;
+        width: 24px;
+    }
+    
+    // @Stats Grid
+    .stats-grid {
+        gap: $sz-l-1440;
+    }
+
+    // @Card
+    .card {
+        padding: $sz-m-1440;
+    }
+
+    .card h2 {
+        margin-right: $sz-m-1440;
+    }
+
+    // Market Cap
+    .card .data:nth-child(2){
+        margin-top: $sz-l-1440;
+    }
+
 }
 
 @media only screen and (min-width: 1920px) {
@@ -137,5 +304,44 @@
         height: 64px;
         width: 64px;
         margin-right: 1.4rem;
+    }
+
+    // @Rankings
+    // Tag basic
+    .tag {
+        padding: $sz-xxs-1920 $sz-xs-1920;
+        font-size: $sz-xs-1920;
+    }
+
+    // Website
+    .tag.website {
+        height: 56px;
+        width: 56px;
+        border-radius: 50%;
+    }
+
+    .tag.website img {
+        height: 32px;
+        width: 32px;
+    }
+    
+    
+    // @Stats Grid
+    .stats-grid {
+        gap: $sz-l-1920;
+    }
+
+    // @Card
+    .card {
+        padding: $sz-m-1920;
+    }
+
+    .card h2 {
+        margin-right: $sz-m-1920;
+    }
+
+    // Market Cap
+    .card .data:nth-child(2){
+        margin-top: $sz-l-1920;
     }
 }
