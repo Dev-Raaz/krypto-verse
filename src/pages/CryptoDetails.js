@@ -106,6 +106,7 @@ const CryptoDetails = () => {
 
             <div className='time-price-range'>
               <p>Low <span>$0</span></p> 
+              <div className='range'/>
               <p><span>${millify(allTimeHigh.price)}</span> High</p>
             </div>
           </div>
@@ -136,8 +137,10 @@ const CryptoDetails = () => {
           </div>
         </div>
 
+        <h2> Charts </h2>
+        <p>Coming Soon . . .</p>
         {/* TODO: Show Chart */}
-        <h2> Time Period </h2>
+        
 
         {/*  */}
     </>
