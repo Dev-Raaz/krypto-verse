@@ -22,7 +22,7 @@ const BasicStatSkeleton = () => {
 }
 
 // Crypto Cards Skeleton
-const CryptoCardSkeleton = () => {
+export const CryptoCardSkeleton = () => {
 
   return (
     <div className='crypto-card-skeleton currency-card'>

@@ -3,6 +3,7 @@ import millify from 'millify'
 
 // @User defined imports
 import { useGetExchangesQuery } from '../services/exchangeApi'
+import ExchangesSkeleton from '../components/skeletons/ExchangesSkeleton'
 import { Helmet } from 'react-helmet'
 
 const Exchanges = ({simplified}) => {
@@ -17,7 +18,7 @@ const Exchanges = ({simplified}) => {
         <meta name='description' 
           content='Here are the top 100 crypto exchanges in the world'/>
       </Helmet>
-      <h1>Loading . . .</h1>
+      <ExchangesSkeleton/>
     </>)
 
   return (

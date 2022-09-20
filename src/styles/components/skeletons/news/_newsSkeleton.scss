@@ -1,0 +1,40 @@
+.news-card-skeleton {
+    position: relative;
+    overflow: hidden;
+}
+
+// Image
+.news-card-skeleton .skeleton.thumbnail {
+    height: 20rem;
+}
+
+// Details
+.news-card-skeleton .details {
+    width: 100%;
+}
+
+.news-card-skeleton .details .skeleton.text:nth-child(3){
+    width: 30%;
+}
+
+// ----------------------------------------------------------
+// @MEDIA QUERRIES
+// ----------------------------------------------------------
+
+@media only screen and (min-width: 768px) {
+    .news-card-skeleton .skeleton.thumbnail {
+        height: 25rem;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    
+}
+
+@media only screen and (min-width: 1440px) {
+    
+}
+
+@media only screen and (min-width: 1920px) {
+    
+}

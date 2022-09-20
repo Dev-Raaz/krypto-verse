@@ -1,14 +1,14 @@
 @import './home/homeSkeleton';
+@import './currencies/currenciesSkeleton';
+@import './exchanges/exchangesSkeleton';
+@import './news/newsSkeleton';
 
-@import './errorCategory/errorCategoryHeroSkeleton';
-
-@import './error/errorHeroSkeleton';
 @import 'shimmer';
 
 
 // @Basic style
 .skeleton {
-    background-color: #ddd;
+    background-color: $skel-color;
     margin: $sz-s 0;
     border-radius: 0.4rem;
 }

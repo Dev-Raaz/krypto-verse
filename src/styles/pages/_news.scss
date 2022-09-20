@@ -1,0 +1,93 @@
+// News Grid 
+.news-grid {
+    display: grid;
+    grid-template-columns: auto;
+    gap: $sz-m;
+}
+
+// News Card
+.news-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: $sz-m;
+    border-radius: $rad-l;
+    background-color: $sec-color;
+    transition: background-color 200ms linear;
+}
+
+// States
+.news-card:hover {
+    background-color: $sec-hover;
+    transition: background-color 200ms linear;
+}
+
+.news-card:active {
+    background-color: $sec-active;
+    transition: background-color 200ms linear;
+}
+
+// Image
+.news-card > img {
+    width: 100%;
+    height: 20rem;
+    background-color: $skel-color;
+    border-radius: $rad-l;
+    object-fit: cover;
+}
+
+// Title
+.news-card > h3 {
+    width: 100%;
+}
+
+// Twitter
+.news-card .twitter {
+    padding: $sz-xxs $sz-xs;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 10rem;
+    border: 1px solid rgba(256, 256, 256, 0.2);
+}
+.news-card .twitter img{
+    height: 16px;
+    width: 16px;
+    margin-right: 5px;
+}
+
+// -------------------------------------------------------
+// @MEDIA QUERRIES
+// -------------------------------------------------------
+
+@media only screen and (min-width: 768px) {
+    .news-grid {
+        grid-template-columns: auto auto;
+        gap: $sz-m-768;
+    }
+
+    // News Card
+    .news-card img {
+        height: 25rem;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .news-grid {
+        grid-template-columns: auto auto auto;
+        gap: $sz-m-1280;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    // Grid
+    .news-grid {
+        gap: $sz-m-1440;
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    // Grid
+    .news-grid {
+        gap: $sz-m-1920;
+    }
+}

@@ -6,6 +6,7 @@ import millify from 'millify'
 import { useGetCryptosQuery } from '../services/cryptoApi' 
 import { Link } from '@mui/material'
 import { Helmet } from 'react-helmet'
+import CurrenciesSkeleton from '../components/skeletons/CurrenciesSkeleton'
 
 const Cryptocurrencies = ({simplified}) => {
   
@@ -21,7 +22,7 @@ const Cryptocurrencies = ({simplified}) => {
           <title>Currencies</title>
           <meta name='description' content='Here are the top 100 crypto currencies in the world'/>
         </Helmet>
-        <h1>Loading . . .</h1>
+        <CurrenciesSkeleton/>
       </>
     )
 
