@@ -1,0 +1,36 @@
+// The top
+.category-skeleton{
+    position: relative;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.category-skeleton .skeleton.thumbnail {
+    margin-top: 0;
+    height: 10rem;
+}
+
+
+// @MEDIA QUERRIES
+
+@media only screen and (min-width: 768px) {
+    .category-skeleton .skeleton.thumbnail {
+        height: 12rem;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .category-skeleton .skeleton.thumbnail {
+        height: 15rem;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    
+}
+
+@media only screen and (min-width: 1920px) {
+    .category-skeleton .skeleton.thumbnail {
+        height: 18rem;
+    }   
+}

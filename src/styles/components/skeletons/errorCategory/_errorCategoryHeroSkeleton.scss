@@ -1,0 +1,116 @@
+/**
+* @Error Category Hero Skeleton
+*/
+.error-category-hero-skeleton {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+// Thumbnail
+.error-category-hero-skeleton .skeleton.thumbnail {
+    height: 30rem;
+    width: 100%;
+    border-radius: $rad-l;
+}
+
+// @Description 
+
+// Title
+.error-category-hero-skeleton .skeleton.title {
+    margin-top: $sz-xxl;
+    height: $sz-xxl;
+    margin-bottom: $sz-l;
+}
+
+// Text
+.error-category-hero-skeleton .skeleton.text {
+    height: $sz-m;
+}
+
+
+
+// -------------------------------------------------
+// @MEDIA QUERRIES
+// -------------------------------------------------
+
+@media only screen and (min-width: 768px) {
+    .error-category-hero-skeleton {
+        flex-direction: row;
+    }
+
+    // Thumbnail
+    .error-category-hero-skeleton .skeleton.thumbnail {
+        height: 30rem;
+        width: 40rem;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-right: $sz-xxl-768;
+    }
+        
+    // Description
+    .error-category-hero-skeleton .error-category-hero-skeleton-wrapper {
+        height: 100%;
+        width: 100%;
+    }
+
+    // Title
+    .error-category-hero-skeleton .skeleton.title {
+        height: $sz-xxl-768;
+        margin-top: $sz-xxl-768;
+        margin-bottom: $sz-l-768;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    
+    // Title
+    .error-category-hero-skeleton .skeleton.title {
+        height: $sz-xxl-1280;
+        margin-top: $sz-xxl-1280;
+        margin-bottom: $sz-l-1280;
+    }
+
+    // Thumbnail
+    .error-category-hero-skeleton .skeleton.thumbnail {
+        height: 40rem;
+        width: 50rem;
+        margin-right: $sz-xxl-1280;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    
+    // Title
+    .error-category-hero-skeleton .skeleton.title {
+        height: $sz-xxl-1440;
+        margin-top: $sz-xxl-1440;
+        margin-bottom: $sz-l-1440;
+    }
+
+    // Thumbnail
+    .error-category-hero-skeleton .skeleton.thumbnail {
+        height: 45rem;
+        width: 55rem;
+        margin-right: $sz-xxl-1440;
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    
+    // Title
+    .error-category-hero-skeleton .skeleton.title {
+        height: $sz-xxl-1920;
+        margin-top: $sz-xxl-1920;
+        margin-bottom: $sz-l-1920;
+    }
+
+    // Thumbnail
+    .error-category-hero-skeleton .skeleton.thumbnail {
+        height: 55rem;
+        width: 65rem;
+        margin-right: $sz-xxl-1440;
+    }
+}
