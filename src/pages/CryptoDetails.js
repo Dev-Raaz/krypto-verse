@@ -15,7 +15,7 @@ const CryptoDetails = () => {
 
   // State
   const [ coin, setCoin ] = useState(null)
-  const [ timePeriod, setTimePeriod ] = useState('7d')
+  // const [ timePeriod, setTimePeriod ] = useState('7d')
 
   // Side Effects
   useEffect(() => {
@@ -31,14 +31,11 @@ const CryptoDetails = () => {
 
   // General Stats
   const {
-    name, btcPrice : price, allTimeHigh, 
+    name, price, allTimeHigh, 
     change, "24hVolume" : volume24h, rank, 
     marketCap, fullyDilutedMarketCap, symbol, 
     tier, websiteUrl, supply
   } = coin
-
-  console.log(coin.price)
-  
   // Get Tier
   const getTier = (tier) => {
     let cls = ''
@@ -78,7 +75,7 @@ const CryptoDetails = () => {
           Tier {coin.tier}</div>
 
           {/* Symbol */}
-          <a target='_blank' className='tag website' href={websiteUrl}>
+          <a target='_blank' rel='noreferrer' className='tag website' href={websiteUrl}>
             <img src='/res/pages/cryptoDetails/website.svg' alt={`${name} Website`}/>
           </a>
         </div>
@@ -88,7 +85,7 @@ const CryptoDetails = () => {
           <div className='card price'>
             <p>{name} Price ({symbol})</p>
             <div className='value'>
-              <h2>${millify(coin.price)}</h2>
+              <h2>${millify(price)}</h2>
               {
                 change > 0 
                 ? 

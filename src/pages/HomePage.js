@@ -2,16 +2,19 @@ import React from 'react'
 import millify from 'millify'
 
 // @User defined imports
-// redux 
+// Redux 
 import { useGetCryptosQuery } from '../services/cryptoApi'
 import Cryptocurrencies from './Cryptocurrencies'
+
+// Skeletons
+import HomePageSkeleton from '../components/skeletons/HomePageSkeleton'
 
 const HomePage = () => {
 
   const { data, isFetching } = useGetCryptosQuery(10)
   
   if(isFetching || data === undefined)
-    return <h1>Loading . . .</h1>
+    return <HomePageSkeleton/>
 
 
   const 
@@ -24,6 +27,7 @@ const HomePage = () => {
   return (
     <>
         <h1>Global Crypto Stats</h1>
+        <p>Here are the Global Crypto Market stats.</p>
 
         {/* Stats Grid */}
         <div className='stats-grid'>

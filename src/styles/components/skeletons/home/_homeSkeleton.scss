@@ -1,0 +1,42 @@
+.skel-flex-wrapper {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+// Skel Group
+.skel-grp {
+    width: 100%;
+}
+
+// Image
+.skel-flex-wrapper .skeleton.thumbnail {
+    width: 40%;
+}
+
+// Text
+.skel-flex-wrapper .skeleton.text {
+    width: 80%;
+}
+
+// Title
+.skel-flex-wrapper .skeleton.title {
+    margin-top: 0;
+}
+
+// @Basic Stat Skeleton
+.basic-stat-skeleton, .crypto-card-skeleton  {
+    position: relative;
+}
+
+// @Crypto Card Skeleton
+.crypto-card-skeleton .skeleton.text {
+    width: 30%;
+    margin-top: 0;
+}
+
+.crypto-card-skeleton .skeleton.thumbnail {
+    height: 64px;
+    width: 64px;
+}

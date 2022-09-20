@@ -27,7 +27,8 @@ NAVBAR
 
 // @Links
 .nav-link {
-    display: block;
+    display: flex;
+    align-items: center;
     padding: $sz-m;
     border-radius: $rad-l;
     margin: 0;
@@ -35,9 +36,22 @@ NAVBAR
     transition: background-color 200ms linear;
 }
 
+.nav-link svg {
+    margin-right: 8px;
+}
+.nav-link svg path {
+    transition: fill 200ms linear;
+}
+
+// :states
 .nav-link:hover {
     background-color: $sec-hover;
     transition: background-color 200ms linear;
+}
+
+.nav-link:hover svg path{
+    fill: $prm-color;
+    transition: fill 200ms linear;
 }
 
 .nav-link:active {
@@ -49,6 +63,10 @@ NAVBAR
 .nav-link.active {
     background-color: $sec-hover;
     color: $prm-color;
+}
+
+.nav-link.active svg path {
+    fill: $prm-color;
 }
 
 // Mob Nav header
