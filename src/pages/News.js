@@ -1,13 +1,29 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Helmet } from 'react-helmet'
-import NewsSkeleton from '../components/skeletons/NewsSkeleton'
+import { Link } from 'react-router-dom'
 
 // @User defined imports
 import { useGetCryptoNewsQuery } from '../services/cryptoNewsApi'
+import NewsSkeleton from '../components/skeletons/NewsSkeleton'
 
-const News = () => {
+const News = ({simplified}) => {
 
-  const { data: news, isFetching } = useGetCryptoNewsQuery( 'Cryptocurrency' )
+  const { data: newsData, isFetching } = useGetCryptoNewsQuery( 'Cryptocurrency' )
+  
+  // States
+  const [ news, setNews ] = useState(undefined)
+  const [view, setView] = useState(6)
+
+  useEffect(() => {
+    if(!isFetching)
+     setNews(newsData)
+
+    if(simplified)
+      setView(6)
+    else
+      setView(24)
+
+  }, [isFetching, newsData, simplified])
 
   // Testing
   if (isFetching || news === undefined)
@@ -20,9 +36,7 @@ const News = () => {
         </Helmet>
         <NewsSkeleton/>
       </>
-    )
-
-  console.log(news.articles)
+  )
 
   return (
     <>
@@ -33,12 +47,17 @@ const News = () => {
             content='Here are the latest news articles'/>
         </Helmet>
 
-        <h1>News</h1>
+        <div className='currencies-header'>
+          <h1>News</h1>
+          {
+            simplified && <Link to='/news'>Show More</Link>
+          }
+        </div>
         <p>Here are the latest Crypto News</p>
         <div className='news-grid'
          >
           {
-            news.articles.map(article => (
+            news.articles.slice(0,view).map(article => (
               <a key={article._id}  target='_blank' rel='noreferrer' 
                className='news-card' href={article.link}>
                 <img src={article.media} alt={`${article.title}`}/>

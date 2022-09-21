@@ -3,6 +3,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: $sz-xxl;
+}
+
+.currencies-header h1 {
+    margin: 0;
 }
 
 // @Currencies Grid
@@ -89,6 +94,11 @@
     .currency-card {
         padding: $sz-m-768;
     }
+
+    // @Currencies Header
+    .currencies-header {
+        margin-top: $sz-xxl-768;
+    }
 }
 
 @media only screen and (min-width: 1280px) {
@@ -107,6 +117,11 @@
         height: 54px;
         width: 54px;
     }
+
+    // @Currencies Header
+    .currencies-header {
+        margin-top: $sz-xxl-1280;
+    }
 }
 
 @media only screen and (min-width: 1440px) {
@@ -119,6 +134,11 @@
     .currency-card {
         padding: $sz-m-1440;
     }
+
+    // @Currencies Header
+    .currencies-header {
+        margin-top: $sz-xxl-1440;
+    }
 }
 
 @media only screen and (min-width: 1920px) {
@@ -130,5 +150,10 @@
     // @Currency Card
     .currency-card {
         padding: $sz-m-1920;
+    }
+    
+    // @Currencies Header
+    .currencies-header {
+        margin-top: $sz-xxl-1920;
     }
 }

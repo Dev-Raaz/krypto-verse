@@ -5,6 +5,7 @@ import millify from 'millify'
 // Redux 
 import { useGetCryptosQuery } from '../services/cryptoApi'
 import Cryptocurrencies from './Cryptocurrencies'
+import News from './News'
 
 // Skeletons
 import HomePageSkeleton from '../components/skeletons/HomePageSkeleton'
@@ -75,8 +76,8 @@ const HomePage = () => {
 
         </div>
 
-        <Cryptocurrencies simplified abc='hey'/>
-        
+        <Cryptocurrencies simplified/>
+        <News simplified/>
     </>
   )
 }

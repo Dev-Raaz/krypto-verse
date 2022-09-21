@@ -4,7 +4,7 @@ import millify from 'millify'
 // @User defined imports
 // API hooks
 import { useGetCryptosQuery } from '../services/cryptoApi' 
-import { Link } from '@mui/material'
+import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 import CurrenciesSkeleton from '../components/skeletons/CurrenciesSkeleton'
 
@@ -31,7 +31,7 @@ const Cryptocurrencies = ({simplified}) => {
     <>
         <div className='currencies-header'>
           <h1>Currencies</h1>
-          {simplified && <Link href='/currencies'>Show More</Link>}
+          { simplified && <Link to='/currencies'>Show More</Link> }
         </div>
         <p>Here are the top {currencies.data.coins.length} crypto currencies.</p>
         <div className='currencies-grid'>

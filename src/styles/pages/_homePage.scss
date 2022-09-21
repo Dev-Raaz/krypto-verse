@@ -37,6 +37,8 @@
     object-fit: contain;
 }
 
+
+
 // --------------------------------------------
 // @MEDIA QUERRIES
 // --------------------------------------------
@@ -55,6 +57,7 @@
     .stats-card h3 {
         margin-top: $sz-m-768;
     }
+
 }
 
 @media only screen and (min-width: 1280px) {
@@ -67,6 +70,7 @@
     .stats-card h3 {
         margin-top: $sz-m-1280;
     }
+
 }
 
 @media only screen and (min-width: 1440px) {
@@ -91,4 +95,5 @@
     .stats-card h3 {
         margin-top: $sz-m-1920;
     }
+    
 }
